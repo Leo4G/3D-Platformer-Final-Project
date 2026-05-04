@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
-  // public int coins;
+   public int coinsCollected;
 
 
 
-    //void OnTriggerEnter3D(Collider3D other)
-   // {
-       // if (other.gameObject.tag == "Coin")
-       // {
-          //  coins += 1;
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Coin")
+        {
+            coinsCollected += 1;
             
-           // other.gameObject.SetActive(false)
-       // }
+            other.gameObject.SetActive(false);
+        }
     
-   // }
+    }
 }
